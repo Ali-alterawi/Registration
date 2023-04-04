@@ -1,3 +1,9 @@
+let ali = document.getElementById("ali");
+
+ali.addEventListener("submit", function (e) {
+    e.preventDefault();
+    validateForm() ;
+});
 function validateForm() 
 {
     // Get form inputs
@@ -24,7 +30,7 @@ function validateForm()
     else if (sessionStorage.getItem(username) !== null)  // Check if username exists in session storage     //If the username is not equal to null, it means it exists
 
      {
-        alert("Username already exists , please Enter another name");
+        alert("Username already exists");
         return false;
     }
 
